@@ -1,0 +1,98 @@
+<div class="hidden z-10 top-0 right-0 bottom-0 left-0 transition-all duration-1000 ease-linear" onclick="toggleSideBar()" id="overlay">
+</div>
+<div class="fixed right-0 bottom-0 pc:top-[94px] mobile:top-[60px] bg-gray-100 w-full tablet:w-[223px] overflow-hidden overflow-y-scroll example z-20 transition-all duration-300 ease-linear unactive pc:translate-x-[223px] translate-x-full" id="sidebar">
+        
+    
+    <div class="flex flex-row flex-wrap items-center justify-center mt-[8px]">
+        {{ nav:menu }}
+            
+        <!---->
+        <div class="flex flex-row justify-start items-center bg-gray-200 rounded-br-[5px] rounded-tl-[5px] h-[45px] cursor-pointer hover:bg-yellow-400 transition-all duration-200 ease-linear my-2 {{ if !last }} pc:w-[90px] mobile:w-[40%] mr-[5px] {{ /if }} {{ if last }} pc:w-[90%] mobile:w-[80%] mx-auto {{ /if }}">
+            <div class="mr-[8px] flex justify-center items-center">
+                <img src="{{ vite:asset src='resources/assets/icon/flash.svg' }}" alt="" class="w-[8px]">
+            </div>
+            <div>
+                <a href="{{ url }}" class="flex flex-row no-underline m-0 mr-[6px] iransans-normal text-[13px] text-black">
+                    {{ title }}
+                </a>
+            </div>
+        </div>
+        <!---->
+        {{ /nav:menu }}
+        
+
+    </div>
+    
+        
+        
+
+    <!---->
+    <div class="mr-[8px]">
+        <!---->
+        <p class="iransans-normal text-[16px] hover:text-lime-500 transition-all duration-200 ease-linear mt-[10px]">دسته بندی</p>
+        <!---->
+
+        <!---->
+        <div class="flex flex-row justify-start items-start hover:bg-yellow-300 transition-all duration-200 ease-linear mt-[20px]">
+            <div class="flex justify-center items-center">
+                <img src="{{ vite:asset src='resources/assets/icon/homesvg.svg'}}" alt="" class="w-[17px]">
+            </div>
+            <div>
+                <a href="https://lc360.ir" class="flex flex-row no-underline iransans-normal m-0 mr-[6px] text-[13px] text-black">
+                    صفحه نخست
+                </a>
+            </div>
+        </div>
+        <!---->
+
+        <!---->
+        <div>
+            <div class="mt-[8px]">
+                {{ nav:topicsq }}
+
+                <div class="flex flex-row justify-start items-center hover:bg-yellow-300 transition-all duration-200 p-2 accordion">
+                    <div class="flex justify-center items-center">
+                        <img src="{{ vite:asset src='resources/assets/icon/flash.svg' }}" class="w-[8px]">
+                    </div>
+                    <div>
+                        {{ if !children }}
+                        <a href="{{ url }}" class="no-underline m-0 mr-[6px] iransans-normal text-[13px] text-black">
+                            {{ title }}
+                        </a>
+                        {{ /else }}
+                        <p class="m-0 mr-[6px] iransans-normal text-[13px] text-black">
+                            {{ title }}
+                        </p>
+                        {{ /if }}
+                    </div>
+                </div>
+                {{ if children }}
+                <div class="panel">
+                {{ children }}
+                    <div class="mt-[3px] mr-[40px] flex flex-row justify-start items-center">
+                        
+                        <div>
+                            <img src="{{ vite:asset src='resources/assets/icon/flash.svg' }}"class="w-[8px]">
+                        </div>
+                        <div class="ps-2">
+                            <a class="iransans-normal text-[13px]" href="{{ url }}">
+                                {{ title }}
+                            </a>
+                        </div>
+                        
+    
+                    </div>
+                    {{ /children }}
+                </div>
+                {{ /if }}
+                {{ /nav:topicsq }}
+
+                
+            </div>
+                       
+        </div>
+        <!---->
+    </div>
+    <!---->
+</div>
+<!--end side bar-->

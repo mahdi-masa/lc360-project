@@ -1,0 +1,32 @@
+.accordion {
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    
+}
+.panel {
+    padding: 0 18px;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+}
+
+/* botstrap icon */
+.p-icon::before{
+    content: "\F309";
+    font-family:  bootstrap-icons!important;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 25px;
+    width: 30px;
+}
+/* end botstrap icon */
+.example::-webkit-scrollbar {
+    display: none;
+}

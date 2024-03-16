@@ -1,0 +1,106 @@
+.slider-title{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    top: -15px;
+}
+/* news slider css  */
+.arrows__newsslider{
+    position: relative;
+    top: -30px!important;
+}
+.next__newsslider{
+    position: absolute!important;
+    /*right: 25px!important;*/
+    left: 0!important;
+    background-color: #FFD800!important;
+    border-radius: 4px!important;
+    opacity: 1!important;
+    width: 35px!important;
+    height: 35px!important;
+}
+.prev__newsslider{
+    position: absolute!important;
+    left: 45px !important;
+    right: unset !important;
+    background-color:#FFD800!important;
+    border-radius: 4px!important;
+    opacity: 1!important;
+    width: 35px!important;
+    height: 35px!important;
+
+}
+
+/* daily report slider css  */
+.arrows__storyslider{
+    position: relative;
+    top: -330px!important;
+}
+
+.next__storyslider{
+    position: absolute!important;
+    right: unset!important;
+    left: 0px!important;
+    background-color: #FFD800!important;
+    border-radius: 4px!important;
+    opacity: 1!important;
+    width: 35px!important;
+    height: 35px!important;
+}
+.prev__storyslider{
+    position: absolute!important;
+    left: 45px !important;
+    right: unset!important;
+    background-color: #FFD800!important;
+    border-radius: 4px!important;
+    opacity: 1!important;
+    width: 35px!important;
+    height: 35px!important;
+}
+
+
+/* specific slider css */
+.next__specificslider{
+    position: absolute!important;
+    left: 5px !important;
+    right: unset !important;
+    background-color:transparent!important;
+    
+    
+     
+}
+.prev__specificslider{
+    position: absolute!important;
+    left: unset !important;
+    right: 5px !important;
+    background-color:transparent!important;
+    ;
+
+}
+
+/* footer slider css */
+.footer__slider-pagination{
+    bottom: unset!important;
+}
+
+
+/* css for slider in documentary page */
+.prev__documentaryslider{
+    position: absolute!important;
+    left: unset !important;
+    right: 0px !important;
+    background-color:transparent!important;
+    ;
+
+}
+.next__documentaryslider{
+    position: absolute!important;
+    left: 0px !important;
+    right: unset !important;
+    background-color:transparent!important;
+    
+    
+     
+}

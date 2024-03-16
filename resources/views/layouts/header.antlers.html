@@ -1,0 +1,81 @@
+<!--nav-->
+<nav class="flex flex-col justify-center">
+    <!--desktop nav-->
+    <div class="bg-[#1F6136] h-[34px] text-end my-auto hidden pc:block">
+        <div class="flex flex-row justify-end m-0 items-center mt-[4px] max-w-[1350px] mx-auto">  
+            {{ nav:menu }}
+                {{ if activeMenu }}
+                    {{if !(index == 0)}}
+                    <span class="mx-1 text-white">|</span>
+                    {{/if}}
+                    <a class="iransans-normal text-white" href="{{ url }}">{{ title }}</a>
+                {{ /if }}
+            {{ /nav:menu }} 
+        </div>
+    </div>
+    <!--end desktop nav-->
+
+    <!--always nav-->
+    <div class="bg-white w-full h-[60px] flex flex-col justify-between items-center">
+
+        <div class="flex justify-between flex-row items-center max-w-[1350px] w-full">
+            <div>
+                <a href="https://lc360.ir/" class="cursor-pointer" target="_self">
+                    <img src="{{ vite:asset src='resources/assets/icon/iconsvg.svg'}}" alt="چرخه حیات" class="mobile:ms-[10px] pc:m-[0px]">
+                </a>
+            </div>
+            <!--desktop nav number 2-->
+            <div class="hidden pc:block">
+                <div class="flex items-center justify-center">
+                    <a href="https://lc360.ir/" target="_self">
+                        <img src="{{ vite:asset src='resources/assets/icon/homesvg.svg'}}">
+                    </a>
+                    {{ nav:topicsq }}
+                        
+                        <a class="iransans-bold text-[16px] no-underline text-center mr-[28px] text-[#315e1c]" href="{{ url }}">{{ title }}</a>
+                        
+                    {{ /nav:topicsq }}
+                    
+                </div>
+            </div>
+            <!--end desktop nav number 2-->
+            <div class="flex justify-center flex-row items-center">
+                <div class="w-[30px] h-[30.02px] mt-[14.6px] mb-[15.3px] ml-[15px]"> 
+                    <button class="cursor-pointer bg-white border-none accordion" id="search-button">
+                        <img src="{{ vite:asset src='resources/assets/icon/searchsvg.svg'}}">
+                    </button>
+                </div>
+    
+                <div class="h-[21.22px] mt-[19px] mb-[19.7px] m-0">
+                    <button class="cursor-pointer bg-white border-none mobile:me-[10px] pc:m-[0px]" onclick="toggleSideBar()">
+                        <img src="{{ vite:asset src='resources/assets/icon/menusvg.svg'}}">
+                    </button>
+                </div>
+                
+            </div>
+            
+        </div>
+
+    </div>
+    <!--end always nav-->
+    
+    <div class="panel flex flex-row justify-center items-center py-3 h-[65px] bg-[#206136]" id="search-panel">
+        <div class="flex justify-center items-center flex-row w-full max-w-[1140px]">
+            <div class="flex items-center justify-center flex-col">
+                <button class="transition-all duration-300 ease-linear hover:scale-125" id="close-button">
+                    <img class="w-[25px]" src="{{vite:asset src='resources/assets/icon/closebutton.svg'}}">
+                </button>
+            </div>
+            <div class="pc:w-[60%] mobile:w-[60%] ms-5 grow">
+                <input class="iransans-500 border-0 rounded-[5px] h-[30px] w-full indent-[10px] text-[13px] max-w-[1140px]" type="text" placeholder="جستجو برای ...">
+            </div>
+            <div class="flex items-center justify-center flex-col ms-3">
+                <button class="hover:scale-125 transition-all duration-300 ease-linear" id="closesearch">
+                    <img class="w-[25px]" src="{{vite:asset src='resources/assets/icon/search.svg'}}">
+                </button>
+            </div>
+
+        </div>
+    </div>
+</nav>
+<!--end nav-->
