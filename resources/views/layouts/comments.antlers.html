@@ -11,34 +11,34 @@
   <div class="md:flex mb-6 flex-wrap mt-[10px]">
     <div class="w-full text-sm flex flex-col drop-shadow-md"> 
         <textarea id="comment-content" name="comment"
-                  class="w-full h-[120px] iransans-normal appearance-none bg-[#B7D6C2] placeholder-white block bg-grey-lighter text-grey-darker {--border--} rounded-tr-[10px] rounded-bl-[10px] focus:outline-dashed outline-1 focus:outline-[#FFC02E] outline-[#B7D6C2] transition-all duration-300 ease-linear {{ if error.comment }} border-red {{ else }} border-grey-lighter {{ /if }} pr-[20px] pt-[16px]"
+                  class="w-full h-[120px] iransans-normal appearance-none bg-[#B7D6C2] placeholder-white block bg-grey-lighter text-grey-darker {--border--} rounded-tr-[10px] rounded-bl-[10px] focus:outline-dashed outline-1 focus:outline-[#FFC02E] outline-[#B7D6C2] transition-all duration-300 ease-linear {{ if error.comment }} border-red {{ else }} border-grey-lighter {{ /if }} pr-[20px] pt-[16px] text-[18px]"
                   placeholder="نظرتان را بیان کنید...">{{ old.comment }}</textarea>
         {{ if (error.comment) }}
         <p class="text-red text-xs italic iransans-normal text-[18px] text-white mt-[16px] mr-[20px]">{{ error.comment }}</p>
         {{ /if }}
     </div>
 
-    <div class="flex flex-row w-full justify-center items-center mt-[10px]">
+    <div class="flex flex-col tablet:flex-row w-full justify-center items-center mt-[10px]">
 
       <div class="w-full drop-shadow-md"> 
           <input
-              class="w-full h-[40px] iransans-normal appearance-none bg-[#B7D6C2] placeholder-white block bg-grey-lighter text-grey-darker rounded-tr-[10px] rounded-bl-[10px] focus:outline-dashed outline-1 focus:outline-[#FFC02E] outline-[#B7D6C2] transition-all duration-300 ease-linear {{ if error.name }} border-red {{ else }} border-grey-lighter {{ /if }} pr-[20px]"
+              class="w-full h-[40px] iransans-normal appearance-none bg-[#B7D6C2] placeholder-white block bg-grey-lighter text-grey-darker rounded-tr-[10px] rounded-bl-[10px] focus:outline-dashed outline-1 focus:outline-[#FFC02E] outline-[#B7D6C2] transition-all duration-300 ease-linear {{ if error.name }} border-red {{ else }} border-grey-lighter {{ /if }} pr-[20px] text-[18px]"
               id="comment-name" type="text" placeholder="نام و نام خانوادگی" name="name" value="{{ old.name }}">
           {{ if (error.name) }}
           <p class="text-red text-xs italic">{{ error.name }}</p>
           {{ /if }}
       </div>
 
-      <div class="w-full drop-shadow-md mx-[10px]">
+      <div class="w-full drop-shadow-md mx-[10px] pc:mt-0 tablet:mt-0 mobile:mt-[10px]">
           <input
-              class="w-full h-[40px] iransans-normal appearance-none bg-[#B7D6C2] placeholder-white block bg-grey-lighter text-grey-darker rounded-tr-[10px] rounded-bl-[10px] focus:outline-dashed outline-1 focus:outline-[#FFC02E] outline-[#B7D6C2] transition-all duration-300 ease-linear {{ if error.email }} border-red {{ else }} border-grey-lighter {{ /if }} pr-[20px]"
+              class="w-full h-[40px] iransans-normal appearance-none bg-[#B7D6C2] placeholder-white block bg-grey-lighter text-grey-darker rounded-tr-[10px] rounded-bl-[10px] focus:outline-dashed outline-1 focus:outline-[#FFC02E] outline-[#B7D6C2] transition-all duration-300 ease-linear {{ if error.email }} border-red {{ else }} border-grey-lighter {{ /if }} pr-[20px] text-[18px]"
               id="comment-email" name="email" type="email" placeholder="آدرس ایمیل" value="{{ old.email }}">
           {{ if (error.email) }}
           <p class="text-red text-xs italic">{{ error.email }}</p>
           {{ /if }}
       </div>
 
-      <div class="w-full drop-shadow-md max-w-[113px] ">
+      <div class="w-full drop-shadow-md pc:max-w-[113px] tablet:max-w-[113px] pc:mt-0 tablet:mt-0 mt-[10px]">
           <input type="submit"
                   class="iransans-bold w-full h-[40px] bg-teal bg-[#1F6136] text-white font-medium tracking-wide rounded-tr-[10px] rounded-bl-[10px] hover:brightness-150 hover:text-teal cursor-pointer"
                   value="ارسال">
