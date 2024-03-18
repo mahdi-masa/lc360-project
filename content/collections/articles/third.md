@@ -1,13 +1,16 @@
 ---
 id: 6364044a-b750-4c92-a9fe-5cbb413994d6
 blueprint: article
-title: third
+title: تانسیبتسشینباتشسیباستینباسیباسینمباسیتنیمباسیشنبنسشیمابشسنیتمبانشتسیبشسیبشسی
 starContent: false
 createdAt: '2024-02-12 18:18:31'
 topics:
   - climate-change
+  - biodiversity
+  - human-life
+  - habitat
 updated_by: c1ede7bd-11c2-4af0-9224-2178b8f71939
-updated_at: 1708681210
+updated_at: 1710745954
 mainTitle: 'سلام این یک تیتر است برای اخبار اخر'
 soduTitleArticle: '<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده</p>'
 articleContext:
@@ -17,4 +20,8 @@ articleContext:
     type: articleContext
     enabled: true
     articleCLip: Documentary/Trailer/2040.mp4
+featuredImagePostHorizental: oceans-12.jpg
+tags:
+  - air-pollution
+  - animals
 ---
