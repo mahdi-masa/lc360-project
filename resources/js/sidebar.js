@@ -13,14 +13,18 @@ window.toggleSideBar = function toggleSideBar(){
     let sidebarElement = document.getElementById('sidebar');
     if( sidebarElement.className.includes('unactive')){
         sidebarElement.style.transform = `translate(0px, 0px)`
-        sidebarOverLay.classList.remove('hidden')
-        sidebarOverLay.classList.add('fixed')
+        if(window.innerWidth > 768) {
+          sidebarOverLay.classList.remove('tablet:hidden')
+          sidebarOverLay.classList.add('fixed')
+        }
         sidebarElement.classList.remove('unactive')
         sidebarElement.classList.add('active')
     }else if(sidebarElement.className.includes('active')){
         sidebarElement.style.transform = `translate(${sidebarWidth()}, 0px)`
-        sidebarOverLay.classList.remove('fixed')
-        sidebarOverLay.classList.add('hidden')
+        if(window.innerWidth > 768) {
+          sidebarOverLay.classList.remove('fixed')
+          sidebarOverLay.classList.add('tablet:hidden')
+        }
         sidebarElement.classList.remove('active')
         sidebarElement.classList.add('unactive')
 
@@ -36,25 +40,26 @@ window.changeSideBarPosition = function changeSideBarPosition() {
       let sidebarElement = document.getElementById('sidebar');
       sidebarElement.classList.remove('pc:top-[94px]')
       sidebarElement.classList.add('pc:top-0')
-    }else{
+    }else if(window.scrollY == 0){
       let sidebarElement = document.getElementById('sidebar');
       sidebarElement.classList.remove('pc:top-0')
       sidebarElement.classList.add('pc:top-[94px]')
 
     }
-  }else if (window.innerWidth < 1024){
-    if (window.scrollY > 30) {
-      // Declare sidebarElement using var, let, or const
-      let sidebarElement = document.getElementById('sidebar');
-      sidebarElement.classList.remove('mobile:top-[60px]')
-      sidebarElement.classList.add('mobile:top-0')
-    }else{
-      let sidebarElement = document.getElementById('sidebar');
-      sidebarElement.classList.remove('mobile:top-0')
-      sidebarElement.classList.add('mobile:top-[60px]')
-
-    }
   }
+  // else if (window.innerWidth < 1024){
+  //   if (window.scrollY > 30) {
+  //     // Declare sidebarElement using var, let, or const
+  //     let sidebarElement = document.getElementById('sidebar');
+  //     sidebarElement.classList.remove('mobile:top-[60px]')
+  //     sidebarElement.classList.add('mobile:top-0')
+  //   }else{
+  //     let sidebarElement = document.getElementById('sidebar');
+  //     sidebarElement.classList.remove('mobile:top-0')
+  //     sidebarElement.classList.add('mobile:top-[60px]')
+
+  //   }
+  // }
 };
 
 
@@ -62,7 +67,7 @@ window.closeSidebar = function closeSidebar(){
     let sidebarElement = document.getElementById('sidebar');
     sidebarElement.style.transform = `translate(${sidebarWidth()}, 0px)`
 }
-window.addEventListener('load',closeSidebar)
+// window.addEventListener('load',closeSidebar)
 window.addEventListener('resize',closeSidebar)
 window.addEventListener('scroll', changeSideBarPosition)
 
