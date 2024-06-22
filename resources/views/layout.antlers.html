@@ -15,10 +15,12 @@
     <link rel="shortcut icon" href="/life-cycle.png" type="image/x-icon"> 
     {{ stack:styles }}
     {{# end of styles #}}
+
     {{# javascript script #}}
     {{ vite src="resources/js/sidebar.js" }}
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     {{# end javascript script #}}
+    
     {{# start seo #}}
     {{ seo_pro:meta }}
     <meta name='author' content='{{pageAuthor}}, {{authorEmail}}'>
