@@ -7,11 +7,7 @@ div.content img {
     margin: 10px 0 15px 0;
     border-radius: 5px !important;
 }
-div.content h2,
-div.content h3,
-div.content h4,
-div.content h5,
-div.content h6 {
+div.content h2{
     background-color: #9ec789;
     border-radius: 5px;
     padding: 5px;
