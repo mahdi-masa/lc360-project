@@ -30,7 +30,7 @@
         {{? $array=[] ?}}
         <div class="mt-[23px]">
             <div class="bg-[#FFC02E] w-[124px] h-[32px] rounded-[3px] shadow-md">
-                <p class="iransans-bold text-[20px] mr-[28px] text-white">اخبار مرتبط</p>
+                <p class="iransans-bold text-[20px] pr-2 text-white">مطالب مرتبط</p>
             </div>
             {{ topics }}
                 {{ if {{ collection:count in="news" taxonomy:topics="{{ slug }}" slug:isnt="{{ current }}" sort="createdAt:desc" }} > 0 }}
