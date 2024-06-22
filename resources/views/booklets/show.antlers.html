@@ -1,35 +1,6 @@
 {{ push:styles }}
-<style>
-
-    #bookletIntro img {
-        margin: 15px auto;
-        width: 80%;
-        border-radius: 8px;
-    }
-    #bookletAnalize img {
-        margin: 15px auto;
-        width: 80%;
-        border-radius: 8px;
-    }
-    
-
-    @media screen and (max-width: 767px) {
-        #bookletIntro img {
-            width: 95%;
-        }
-        video{
-            width: 95%!important;
-        }
-        #bookletAnalize img {
-            width: 95%;
-        }
-
-    }
-
-</style>
-    
+    {{ vite src="resources/css/editor.css" }}
 {{ /push:styles }}
-
 <!-- booklet info section -->
 <div class="flex flex-col justify-center items-center tablet:flex-row max-w-[1100px] pc:mx-auto">
     <div class="w-full text-center tablet:basis-1/4 tablet:mt-5 tablet:ms-14">
