@@ -18,7 +18,7 @@ export default defineConfig({
              'resources/js/statistic.js',
              'resources/js/topics-slider.js',
              'resources/js/documentary-slider.js',
-             'resources/css/article.css',
+             'resources/css/editor.css',
              'resources/css/fontirannum.css',
              
             ],
