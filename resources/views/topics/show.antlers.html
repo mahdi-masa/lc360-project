@@ -47,7 +47,7 @@
                             {{ if starContent}}
                             
                             <li class="splide__slide">
-                                <a class="w-full h-full" href="https://lc360.ir{{ url }}">
+                                <a class="w-full h-full" href="{{ config:app:url }}{{ url }}">
                                     <img class="w-full h-full object-cover rounded-[8px]" src="{{featuredImagePostHorizental}}" alt="">
                                 </a>
                             </li>
@@ -83,13 +83,13 @@
                                 
                                 <li class="splide__slide">
                                     <div class="splide__slide__container">
-                                        <a href="https://lc360.ir{{ url }}">
+                                        <a href="{{ config:app:url }}{{ url }}">
                                             <img class="object-cover mx-auto w-full h-full rounded-[5px]" src="{{featuredImagePostVertical}}" alt="">
                                         </a>
                                         
                                     </div>
                                     <div class="text-center mt-[10px]">
-                                        <a href="https://lc360.ir{{ url }}" class="iransans-bold sansnum-bold text-[15px] text-[#1C4E00]">{{ documentaryFarsiName }}</a>
+                                        <a href="{{ config:app:url }}{{ url }}" class="iransans-bold sansnum-bold text-[15px] text-[#1C4E00]">{{ documentaryFarsiName }}</a>
                                     </div>
                                 </li>
                                 {{/collection}}
@@ -128,7 +128,7 @@
                                 
                                 <li class="splide__slide flex flex-row items-center justify-center">
                                     <div class="splide__slide__container h-fit mt-[2.5%] mr-[10px] w-[57%]">
-                                        <a class="" href="https://lc360.ir{{ url }}">
+                                        <a class="" href="{{ config:app:url }}{{ url }}">
                                             <img class="object-cover mx-auto w-full h-[95%] rounded-[5px]" src="{{featuredImagePostVertical}}" alt="">
                                         </a>
                                         
@@ -136,7 +136,7 @@
                                     <div class="text-center w-[43%] h-full">
                                         <div class="mt-[10px]">
                                             <span class="iransans-600 sansnum-600 text-[16px] text-[#1C4E00] truncate">
-                                                <a href="https://lc360.ir{{ url }}">
+                                                <a href="{{ config:app:url }}{{ url }}">
                                                     {{ bookletName }}
                                                 </a>
                                             </span>
@@ -193,20 +193,20 @@
                     {{collection:articles taxonomy:topics="{{slug}}" limit='4' sort="createdAt:desc"}}
                     <div class="flex flex-row justify-between items-center w-full my-[10px] h-[67px] pc:h-fit mx-auto bg-white rounded-[5px]">
                         <div class="w-[356px] h-[200px]">
-                            <a class="w-full" href="https://lc360.ir{{url}}">
+                            <a class="w-full" href="{{ config:app:url }}{{url}}">
                                 <img class="w-full rounded-r-[5px] h-full" src="{{ featuredImagePostHorizental }}" alt="{{featuredImagePost:alt}}">
                             </a>
                         </div>
                         <div class="flex flex-col justify-between items-stretch w-[577px]">
                             <div class="w-full h-[160px] mx-[10px] mt-[10px] max-w-fit">
                                 <span class="text-black text-[16px] iransans-500 sansnum-500 block text-justify">
-                                    <a href="https://lc360.ir{{url}}">
+                                    <a href="{{ config:app:url }}{{url}}">
                                         {{mainTitle}}
                                     </a>
                                 </span>
                                 <div>
                                     <div class="iransans-normal sansnum-normal text-justify w-[95%] pc:w-fit h-[70px] text-[13px]">
-                                        <a href="https://lc360.ir{{url}}">
+                                        <a href="{{ config:app:url }}{{url}}">
                                             {{postSummary}}
                                         </a>
                                     </div>
@@ -221,7 +221,7 @@
                                     <div class="flex flex-row justify-center items-center bg-gray-100 rounded-[3px] p-[5px] mx-1">
 
                                         <img class="pe-[3px]" src="{{vite:asset src='resources/assets/icon/dot.svg'}}" alt="">
-                                        <a class="iransans-normal sansnum-normal text-[13px]" href="https://lc360.ir/topics/{{ slug }}">
+                                        <a class="iransans-normal sansnum-normal text-[13px]" href="{{ config:app:url }}/topics/{{ slug }}">
                                             {{ title }}
                                         </a>
                                     </div>
@@ -267,14 +267,14 @@
                                         
                 <div class="flex flex-row justify-between items-center rounded-[5px] w-full mt-[10px] h-[56px] mx-auto bg-white">
                     <div class="w-[26%] h-[56px] min-w-[110px] rounded-[5px]">
-                        <a class="min-w-full w-full h-full block" href="https://lc360.ir{{url}}">
+                        <a class="min-w-full w-full h-full block" href="{{ config:app:url }}{{url}}">
                             <img class="w-full h-full rounded-r-[5px]" src="{{ featuredImagePostHorizental }}" alt="{{ featuredImagePostHorizental:alt }}">
                         </a>
                     </div>
                     <div class="flex flex-col justify-center items-center grow max-w-[74%]">
                         <div class="w-full rounded-[5px]">
                             <span class="w-full w-block">
-                                <a class="w-full block truncate ps-[10px] iransans-500 sansnum-500 text-[15px] pe-[10px]" href="https://lc360.ir{{url}}">
+                                <a class="w-full block truncate ps-[10px] iransans-500 sansnum-500 text-[15px] pe-[10px]" href="{{ config:app:url }}{{url}}">
                                     {{newsTitle}}
                                 </a>
                             </span>
@@ -289,7 +289,7 @@
                                 </div>
                                 <div>
                                         <span class="bg-gray-100 p-[4px] rounded-[8px] mx-1 text-[10px]">
-                                            <a class="iransans-normal" href="https://lc360.ir/topics/{{ url }}">
+                                            <a class="iransans-normal" href="{{ config:app:url }}/topics/{{ url }}">
                                                 {{ title }}
                                             </a>
                                         </span>
@@ -344,12 +344,12 @@
                                 {{ collection:documentary taxonomy:topics='{{slug}}' sort="createdAt:desc"}}
                                 <li class="splide__slide bg-[#BDD5C3] rounded-[8px]">
                                     <div class="splide__slide__container">
-                                        <a href="https://lc360.ir{{ url }}">
+                                        <a href="{{ config:app:url }}{{ url }}">
                                             <img class="w-[90%] h-full mx-auto obejct-cover mt-[10px] rounded-[8px]" src="{{ featuredImagePostVertical }}">
                                         </a>
                                     </div>
                                     <div class="text-center mt-[10px] mb-[15px]">
-                                        <a href="https://lc360.ir{{ url }}" class="iransans-bold sansnum-normal text-[16px]">
+                                        <a href="{{ config:app:url }}{{ url }}" class="iransans-bold sansnum-normal text-[16px]">
                                             {{ documentaryFarsiName }}
                                         </a>
                                     </div>
@@ -428,13 +428,13 @@
                     <li class="splide__slide bg-[#BDD5C3] rounded-[8px]">
                         <div class="splide__slide__container flex flex-row w-full">
                             <div class="w-[200px] pt-[10px] ps-[10px]">
-                                <a href="https://lc360.ir{{ url }}">
+                                <a href="{{ config:app:url }}{{ url }}">
                                     <img class="w-full rounded-[5px]" src="{{ featuredImagePostVertical }}">
                                 </a>
                             </div>
                             <div class="w-[150px] grow mx-[10px] my-[10px]">
                                 <div class="text-center">
-                                    <a href="https://lc360.ir{{ url }}" class="iransans-bold sansnum-bold whitespace-nowrap text-[16px]">{{ bookletName }}</a>
+                                    <a href="{{ config:app:url }}{{ url }}" class="iransans-bold sansnum-bold whitespace-nowrap text-[16px]">{{ bookletName }}</a>
                                 </div>
                                 <div class="text-center">
                                     <span class="iransans-bold whitespace-nowrap text-[12px] text-white before:content-['نویسنده:_']">{{ bookletAuthor }}</span>
