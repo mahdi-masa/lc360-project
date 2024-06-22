@@ -36,7 +36,7 @@
                     {{ collection from="news|documentary|articles|booklets|dailyReport" sort="createdAt:desc" }}
                     {{ if starContent }}
                     <li class="splide__slide">
-                        <a class="w-full h-full" href="https://lc360.ir{{ url }}">
+                        <a class="w-full h-full" href="{{ config:app:url }}{{ url }}">
                             <img class="w-full h-full object-cover rounded-[8px]" src="{{starPoster}}" alt="">
                         </a>
                     </li>
@@ -201,7 +201,7 @@
                 
                 <li class="splide__slide bg-white rounded-[5px]">
                     <div class="splide__slide__container">
-                        <a href="https://lc360.ir{{ url }}">
+                        <a href="{{ config:app:url }}{{ url }}">
 
                             <img class="rounded-t-[5px] h-full w-full object-cover" src="{{ featuredImagePostHorizental }}">
                         </a>
@@ -209,7 +209,7 @@
                     </div>
                     <div class="h-[110px] flex flex-col">
                         <div class="grow mt-[4px]">
-                            <a href="https://lc360.ir{{ url }}">
+                            <a href="{{ config:app:url }}{{ url }}">
                                 <span class="iransans-600 sansnum-600 text-[15px] ps-[10px] block w-full pe-[10px] text-justify">{{title}}</span>
                             </a>
                         </div>
@@ -218,7 +218,7 @@
                             <div class="flex flex-row justify-center items-center bg-gray-100 rounded-[4px] p-[5px] me-[7px]">
 
                                 <img class="pe-[3px]" src="{{vite:asset src='resources/assets/icon/dot.svg'}}" alt="">
-                                <a class="iransans-normal text-[13px]" href="https://lc360.ir/topics/{{ slug }}">
+                                <a class="iransans-normal text-[13px]" href="{{ config:app:url }}/topics/{{ slug }}">
                                     {{ title }}
                                 </a>
                             </div>
@@ -237,10 +237,10 @@
             <div class="flex flex-row justify-evenly mx-auto mt-[30px]">
                 <!--number 1-->    
                 <div class="flex flex-col">
-                    <a href="https://lc360.ir/topics/climate-change" target="__blank">
+                    <a href="{{ config:app:url }}/topics/climate-change" target="__blank">
                         <img src="{{vite:asset src='resources/assets/icon/climate-change.svg'}}" alt="">
                     </a>
-                    <a href="https://lc360.ir/topics/climate-change" target="__blank">
+                    <a href="{{ config:app:url }}/topics/climate-change" target="__blank">
                         <p class="iransans-bold text-[16px] text-center m-0 mt-[4px]">تغییرات اقلیمی</p>
                     </a>
                 </div>
@@ -248,10 +248,10 @@
                 
                 <!-- number 2-->
                 <div>
-                    <a href="https://lc360.ir/topics/habitat" target="__blank">
+                    <a href="{{ config:app:url }}/topics/habitat" target="__blank">
                         <img src="{{vite:asset src='resources/assets/icon/ecosystem.svg'}}" alt="">
                     </a>
-                    <a href="https://lc360.ir/topics/habitat" target="__blank">
+                    <a href="{{ config:app:url }}/topics/habitat" target="__blank">
                         <p class="iransans-bold text-[16px] text-center m-0 mt-[4px]">زیست گاه</p>
                     </a>
                 </div>
@@ -259,10 +259,10 @@
 
                 <!--number 3-->
                 <div>
-                    <a href="https://lc360.ir/topics/biodiversity" target="__blank">
+                    <a href="{{ config:app:url }}/topics/biodiversity" target="__blank">
                         <img src="{{vite:asset src='resources/assets/icon/Biodiversity.svg'}}" alt="">
                     </a>
-                    <a href="https://lc360.ir/topics/biodiversity" target="__blank">
+                    <a href="{{ config:app:url }}/topics/biodiversity" target="__blank">
                         <p class="iransans-bold text-[16px] text-center m-0 mt-[4px]">تنوع زیستی</p>
                     </a>
                 </div>
@@ -270,10 +270,10 @@
 
                 <!--number 4-->
                 <div>
-                    <a href="https://lc360.ir/topics/human-life" target="__blank">
+                    <a href="{{ config:app:url }}/topics/human-life" target="__blank">
                         <img src="{{vite:asset src='resources/assets/icon/eco-human.svg'}}" alt="">
                     </a>
-                    <a href="https://lc360.ir/topics/human-life" target="__blank">
+                    <a href="{{ config:app:url }}/topics/human-life" target="__blank">
                         <p class="iransans-bold text-[16px] text-center m-0 mt-[4px]">زیست انسانی</p>
                     </a>
                 </div>
@@ -286,7 +286,7 @@
                 <!--post slider number 1-->
                 <div class="flex flex-col mx-0 mobile:mt-[15px] pc:mt-[0px] w-full items-center justify-center pc:w-[33%]">
                     <div class="flex flex-row justify-between items-center mx-auto w-full">
-                        <a href="https://lc360.ir/topics/climate-change">
+                        <a href="{{ config:app:url }}/topics/climate-change">
                             <p class="m-0 iransans-bold text-[16px] text-[#1C4E00]">تغییرات اقلیمی</p>
                         </a>
                         <img src="{{vite:asset src='resources/assets/icon/array.svg'}}" alt="">
@@ -306,7 +306,7 @@
                                     
                                     <div class="flex items-center flex-row justify-start h-[45px]">
                                         <img src="{{ vite:asset src='resources/assets/icon/rectangle.svg'}}" alt="" class="mr-[10px]">
-                                        <a class="truncate" href="https://lc360.ir{{ url }}">
+                                        <a class="truncate" href="{{ config:app:url }}{{ url }}">
                                             <p class="m-0 mr-[3px] iransans-normal text-[15px] truncate me-[10px]">{{ title }}</p>
 
                                         </a>
@@ -323,7 +323,7 @@
                 <!--post slider number 2-->
                 <div class="flex flex-col mx-auto mobile:mt-[15px] pc:mt-[0px] w-full items-center justify-center pc:w-[33%]">
                     <div class="flex flex-row justify-between items-center mx-auto w-full">
-                        <a href="https://lc360.ir/topics/habitat">
+                        <a href="{{ config:app:url }}/topics/habitat">
                             <p class="m-0 iransans-bold text-[16px] text-[#1C4E00]">زیست گاه</p>
                         </a>
                         <img src="{{ vite:asset src='resources/assets/icon/array.svg'}}">
@@ -345,7 +345,7 @@
                                     
                                     <div class="flex items-center flex-row justify-start h-[45px]">
                                         <img src="{{ vite:asset src='resources/assets/icon/rectangle.svg'}}" class="mr-[10px]">
-                                        <a class="truncate" href="https://lc360.ir{{url}}">
+                                        <a class="truncate" href="{{ config:app:url }}{{url}}">
                                             <p class="m-0 mr-[3px] iransans-normal text-[15px] truncate me-[10px]">{{ title }}</p>
                                         </a>
                                     </div>
@@ -363,7 +363,7 @@
                 <!--post slider number 3-->
                 <div class="flex flex-col mx-0 mobile:mt-[15px] pc:mt-[0px] w-full items-center justify-center pc:w-[33%]">
                     <div class="flex flex-row justify-between items-center mx-auto w-full">
-                        <a href="https://lc360.ir/topics/biodiversity">
+                        <a href="{{ config:app:url }}/topics/biodiversity">
                             <p class="m-0 iransans-bold text-[16px] text-[#1C4E00]">تنوع زیستی</p>
                         </a>
                         <img src="{{ vite:asset src='resources/assets/icon/array.svg'}}">
@@ -386,7 +386,7 @@
                                     
                                     <div class="flex items-center flex-row justify-start h-[45px]">
                                         <img src="{{ vite:asset src='resources/assets/icon/rectangle.svg'}}" alt="چرخه حیات" class="mr-[10px]">
-                                        <a class="truncate" class="block" href="https://lc360.ir{{ url }}">
+                                        <a class="truncate" class="block" href="{{ config:app:url }}{{ url }}">
                                             <p class="m-0 mr-[3px] iransans-normal text-[15px] truncate me-[10px]">{{ title }}</p>
                                         </a>
                                     </div>
@@ -412,7 +412,7 @@
                 <!--post slider number 1-->
                 <div class="pc:flex mobile:hidden flex-col mobile:mt-[15px] mx-0 pc:mt-[0px] w-full items-center justify-center pc:w-[33%] ">
                     <div class="flex flex-row justify-between items-center mx-auto w-full">
-                        <a href="https://lc360.ir/topics/human-life">
+                        <a href="{{ config:app:url }}/topics/human-life">
                             <p class="m-0 iransans-bold text-[16px] text-[#1C4E00]">زیست انسانی</p>
                         </a>
                         <img src="{{vite:asset src='resources/assets/icon/array.svg'}}" alt="">
@@ -434,7 +434,7 @@
                                     
                                     <div class="flex items-center flex-row justify-start h-[45px]">
                                         <img src="{{ vite:asset src='resources/assets/icon/rectangle.svg'}}" alt="چرخه حیات" class="mr-[10px]">
-                                        <a class="truncate" href="https://lc360.ir{{ url }}">
+                                        <a class="truncate" href="{{ config:app:url }}{{ url }}">
                                             <p class="m-0 mr-[3px] iransans-normal text-[15px] truncate me-[10px]">{{ title }}</p>
 
                                         </a>
@@ -451,7 +451,7 @@
                 <!--post slider number 2-->
                 <div class="pc:flex mobile:hidden flex-col mobile:mt-[15px] mx-auto pc:mt-[0px] w-full items-center justify-center pc:w-[33%]">
                     <div class="flex flex-row justify-between items-center mx-auto w-full">
-                        <a href="https://lc360.ir/tags/animals">
+                        <a href="{{ config:app:url }}/tags/animals">
                             <p class="m-0 iransans-bold text-[16px] text-[#1C4E00]">جانور</p>
                         </a>
                         <img src="{{ vite:asset src='resources/assets/icon/array.svg'}}">
@@ -474,7 +474,7 @@
                                     
                                     <div class="flex items-center flex-row justify-start h-[45px]">
                                         <img src="{{ vite:asset src='resources/assets/icon/rectangle.svg'}}" class="mr-[10px]">
-                                        <a class="truncate" href="https://lc360.ir{{url}}">
+                                        <a class="truncate" href="{{ config:app:url }}{{url}}">
                                             <p class="m-0 mr-[3px] iransans-normal text-[15px] truncate me-[10px]">{{ title }}</p>
                                         </a>
                                     </div>
@@ -492,7 +492,7 @@
                 <!--post slider number 3-->
                 <div class="pc:flex mobile:hidden flex-col mobile:mt-[15px] mx-0 pc:mt-[0px] w-full items-center justify-center pc:w-[33%] ">
                     <div class="flex flex-row justify-between items-center mx-auto w-full">
-                        <a href="https://lc360.ir/tags/air-pollution">
+                        <a href="{{ config:app:url }}/tags/air-pollution">
                             <p class="m-0 iransans-bold text-[16px] text-[#1C4E00]">آلودگی هوا</p>
                         </a>
                         <img src="{{ vite:asset src='resources/assets/icon/array.svg'}}" alt="">
@@ -514,7 +514,7 @@
                                     
                                     <div class="flex items-center flex-row justify-start h-[45px]">
                                         <img src="{{ vite:asset src='resources/assets/icon/rectangle.svg'}}" class="mr-[10px]">
-                                        <a class="truncate" class="block" href="https://lc360.ir{{ url }}">
+                                        <a class="truncate" class="block" href="{{ config:app:url }}{{ url }}">
                                             <p class="m-0 mr-[3px] iransans-normal text-[15px] truncate me-[10px]">{{ title }}</p>
                                         </a>
                                     </div>
@@ -558,14 +558,14 @@
                 
                 <li class="splide__slide bg-white rounded-[5px]">
                     <div class="splide__slide__container h-1/2">
-                        <a href="https://lc360.ir{{ url }}">
+                        <a href="{{ config:app:url }}{{ url }}">
                             <img class="rounded-t-[5px] h-full w-full object-cover" src="{{ featuredImagePostHorizental }}">
                         </a>
                         
                     </div>
                     <div class="h-[110px] flex flex-col">
                         <div class="ps-[10px] grow mt-[4px]">
-                            <a href="https://lc360.ir{{ url }}">
+                            <a href="{{ config:app:url }}{{ url }}">
                                 <span class="iransans-600 sansnum-600 text-[15px] block pe-[10px] text-justify">{{title}}</span>
                             </a>
                         </div>
@@ -574,7 +574,7 @@
                             <div class="flex flex-row justify-center items-center mx-1 bg-gray-100 rounded-[4px] p-[5px] ms-[10px]">
 
                                 <img class="pe-[3px]" src="{{vite:asset src='resources/assets/icon/dot.svg'}}" alt="">
-                                <a class="iransans-normal text-[13px]" href="https://lc360.ir/topics/{{ slug }}">
+                                <a class="iransans-normal text-[13px]" href="{{ config:app:url }}/topics/{{ slug }}">
                                     {{ title }}
                                 </a>
                             </div>

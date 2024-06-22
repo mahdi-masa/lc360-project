@@ -20,14 +20,14 @@
 
         <div class="flex justify-between flex-row items-center max-w-[1350px] w-full">
             <div>
-                <a href="https://lc360.ir/" class="cursor-pointer" target="_self">
+                <a href="{{ config:app:url }}" class="cursor-pointer" target="_self">
                     <img src="{{ vite:asset src='resources/assets/icon/iconsvg.svg'}}" alt="چرخه حیات" class="mobile:ms-[10px] pc:m-[0px]">
                 </a>
             </div>
             <!--desktop nav number 2-->
             <div class="hidden pc:block">
                 <div class="flex items-center justify-center">
-                    <a href="https://lc360.ir/" target="_self">
+                    <a href="{{ config:app:url }}" target="_self">
                         <img src="{{ vite:asset src='resources/assets/icon/homesvg.svg'}}">
                     </a>
                     {{ nav:topicsq }}
