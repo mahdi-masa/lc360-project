@@ -16,7 +16,7 @@ export default defineConfig({
              'resources/js/search-bar.js',
              'resources/js/sidebar.js',
              'resources/js/statistic.js',
-             'resources/js/topics-slider.js',
+             'resources/js/tags-topics-slider.js',
              'resources/js/documentary-slider.js',
              'resources/css/editor.css',
              'resources/css/fontirannum.css',
