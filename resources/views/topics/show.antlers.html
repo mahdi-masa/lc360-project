@@ -150,7 +150,9 @@
                             {{/collection}}
                           </ul>
                         </div>
-                    </section>
+                    {{ /if }}
+                    
+                </div>
                     
                 </div>
             </div>
@@ -209,7 +211,7 @@
             
                                 <div class="flex justify-center items-center flex-row mr-[10px]">
                                     {{ topics }}
-                                    <div class="flex flex-row justify-center items-center bg-gray-100 rounded-[3px] p-[5px]">
+                                    <div class="flex flex-row justify-center items-center bg-gray-100 rounded-[3px] p-[5px] mx-1">
 
                                         <img class="pe-[3px]" src="{{vite:asset src='resources/assets/icon/dot.svg'}}" alt="">
                                         <a class="iransans-normal sansnum-normal text-[13px]" href="https://lc360.ir/topics/{{ slug }}">

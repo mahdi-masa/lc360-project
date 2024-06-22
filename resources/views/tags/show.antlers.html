@@ -119,38 +119,47 @@
             
 
                 <div class="bg-[#BDD5C3] mt-[10px] h-[342px] rounded-[8px]">
-                    <section class="splide w-fit" id="booklet-slider-pc">
-                        <div class="splide__track">
-                          <ul class="splide__list">
-                            {{ collection from="booklets" taxonomy:tags="{{ slug }}" sort="createdAt:desc"}}
-                            
-                            <li class="splide__slide flex flex-row items-center justify-center">
-                                <div class="splide__slide__container h-fit mt-[2.5%] mr-[10px] w-[57%]">
-                                    <a class="" href="https://lc360.ir{{ url }}">
-                                        <img class="object-cover mx-auto w-full h-[95%] rounded-[5px]" src="{{featuredImagePostVertical}}" alt="">
-                                    </a>
-                                    
-                                </div>
-                                <div class="text-center w-[43%] h-full">
-                                    <div class="mt-[10px]">
-                                        <span class="iransans-600 sansnum-600 text-[16px] text-[#1C4E00] truncate">
-                                            <a href="https://lc360.ir{{ url }}">
-                                                {{ bookletName }}
-                                            </a>
-                                        </span>
+                    <div class="bg-[#BDD5C3] mt-[10px] h-[342px] rounded-[8px]">
+                    {{ if collection from='booklets' taxonomy:tags='{{ slug }}' | count > 0 }}
+                        <section class="splide w-fit" id="booklet-slider-pc">
+                            <div class="splide__track">
+                            <ul class="splide__list">
+                                {{ collection from="booklets" taxonomy:tags="{{ slug }}" sort="createdAt:desc"}}
+                                
+                                <li class="splide__slide flex flex-row items-center justify-center">
+                                    <div class="splide__slide__container h-fit mt-[2.5%] mr-[10px] w-[57%]">
+                                        <a class="" href="https://lc360.ir{{ url }}">
+                                            <img class="object-cover mx-auto w-full h-[95%] rounded-[5px]" src="{{featuredImagePostVertical}}" alt="">
+                                        </a>
+                                        
                                     </div>
-                                    <div class="flex flex-col justify-center items-center mr-[10px] mt-[5px]">
-                                        <span class="iransans-500 sansnum-500 text-[13px] text-white before:content-['نویسنده:_'] w-full text-right">{{bookletAuthor}}</span>
+                                    <div class="text-center w-[43%] h-full">
+                                        <div class="mt-[10px]">
+                                            <span class="iransans-600 sansnum-600 text-[16px] text-[#1C4E00] truncate">
+                                                <a href="https://lc360.ir{{ url }}">
+                                                    {{ bookletName }}
+                                                </a>
+                                            </span>
+                                        </div>
+                                        <div class="flex flex-col justify-center items-center mr-[10px] mt-[5px]">
+                                            <span class="iransans-500 sansnum-500 text-[13px] text-white before:content-['نویسنده:_'] w-full text-right">{{bookletAuthor}}</span>
+                                        </div>
+                                        <div class="mt-[5px] mb-[10px] mx-[10px] iransans-500 sansnum-500 text-justify overflow-hidden overscroll-y-scroll-contain h-[270px] text-[13px] rtl">
+                                            {{ postSummary }}
+                                        </div>
                                     </div>
-                                    <div class="mt-[5px] mb-[10px] mx-[10px] iransans-500 sansnum-500 text-justify overflow-hidden overscroll-y-scroll-contain h-[270px] text-[13px] rtl">
-                                        {{ postSummary }}
-                                    </div>
-                                </div>
-                            </li>
-                            {{/collection}}
-                          </ul>
+                                </li>
+                                {{/collection}}
+                            </ul>
+                            </div>
+                        </section>
+                    {{ else }}
+                        <div class="flex flex-col justify-center items-center w-full h-full">
+                            <span class="iransans-500 text-center">هیج محتوایی برای نمایش وجود ندارد.</span>
                         </div>
-                    </section>
+                    {{ /if }}
+                    
+                </div>
                     
                 </div>
             </div>
@@ -209,7 +218,7 @@
             
                                 <div class="flex justify-center items-center flex-row mr-[10px]">
                                     {{ tags }}
-                                    <div class="flex flex-row justify-center items-center bg-gray-100 rounded-[3px] p-[5px]">
+                                    <div class="flex flex-row justify-center items-center bg-gray-100 rounded-[3px] p-[5px] mx-1">
 
                                         <img class="pe-[3px]" src="{{vite:asset src='resources/assets/icon/dot.svg'}}" alt="">
                                         <a class="iransans-normal sansnum-normal text-[13px]" href="https://lc360.ir/tags/{{ slug }}">
