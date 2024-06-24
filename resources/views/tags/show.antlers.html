@@ -257,15 +257,15 @@
                 {{collection:news taxonomy:tags="{{slug}}" sort="createdAt:desc"}}
                                         
                 <div class="flex flex-row justify-between items-center rounded-[5px] w-full mt-[10px] h-[56px] mx-auto bg-white">
-                    <div class="w-[26%] h-[56px] min-w-[110px] rounded-[5px]">
+                    <div class="h-[56px] max-w-[110px] min-w-[110px] rounded-[5px]">
                         <a class="min-w-full w-full h-full block" href="https://lc360.ir{{url}}">
                             <img class="w-full h-full rounded-r-[5px]" src="{{ featuredImagePostHorizental }}" alt="{{ featuredImagePostHorizental:alt }}">
                         </a>
                     </div>
-                    <div class="flex flex-col justify-center items-center grow max-w-[74%]">
+                    <div class="flex flex-col justify-center items-center overflow-hidden">
                         <div class="w-full rounded-[5px]">
                             <span class="w-full w-block">
-                                <a class="w-full block truncate ps-[10px] iransans-500 sansnum-500 text-[15px] pe-[10px]" href="https://lc360.ir{{url}}">
+                                <a class="w-full block truncate iransans-500 sansnum-500 text-[15px] px-[10px]" href="https://lc360.ir{{url}}">
                                     {{newsTitle}}
                                 </a>
                             </span>
