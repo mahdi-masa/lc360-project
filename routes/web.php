@@ -17,3 +17,10 @@ Route::get('/', function () {
     return view('main');
 });
 
+Route::get('/report', function () {
+    return view('other.formafzar.report');
+});
+
+Route::get('/action', function () {
+    return view('other.formafzar.action');
+});
